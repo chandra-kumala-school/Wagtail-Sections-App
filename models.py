@@ -5,7 +5,8 @@ from wagtail.core.fields import RichTextField, StreamField
 from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 from wagtail.search import index
 
-from home.models import CommonStreamBlock,  Seo
+from social.models import  Seo
+from streams.blocks import CommonStreamBlock
 
 class SectionIndexPage(Page, Seo):
     alt_template = models.BooleanField(verbose_name="Use list style Index page instead?")

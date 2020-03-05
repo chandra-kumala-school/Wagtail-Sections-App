@@ -9,13 +9,9 @@
 
 {% block content %}
 
-{% block nav %}
-{% include 'home/_nav.html' %}
-{% endblock %}
-
-{% for block in page.my_stream %}
-{% include 'home/_stream.html' %}
-{% endfor %}
+    {% for stream in page.my_stream %}
+        {% include_block stream %}
+    {% endfor %}
 
 <div class="d-flex flex-column list-group px-5 my-3">
     {% for post in blogpages %}
