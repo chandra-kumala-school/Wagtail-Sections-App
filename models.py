@@ -31,6 +31,10 @@ class SectionIndexPage(Page, Seo):
             inclusive=True).live().in_menu()
         return context
 
+    search_fields = Page.search_fields + [
+        index.SearchField('my_stream'),
+    ]
+
     content_panels = Page.content_panels + [
         FieldPanel('alt_template'),
         StreamFieldPanel('my_stream')
